@@ -102,7 +102,7 @@ void IPCFramework::writeSharedMemory(int shmid, const string& message) {
 
 void IPCFramework::readSharedMemory(int shmid) {
     char* abc = (char*)shmat(shmid, nullptr, 0);
-    cout << "Received via Shared Memory: " << abc << endl;
+    cout << "obtained from Shared Memory: " << abc << endl;
     shmdt(abc);
 }
 
