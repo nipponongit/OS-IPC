@@ -151,8 +151,8 @@ int main() {
     writer.join();
     reader.join();
 
-    // Test Message Queue
-    cout << "\n[Testing Message Queue]\n";
+    
+    cout << "\n[Testing Message Queue]\n"; //test message queue
     int msgid = IPCFramework::createMessageQueue();
     IPCFramework::sendMessageQueue(msgid, "Hello from Message Queue!");
     IPCFramework::receiveMessageQueue(msgid);
