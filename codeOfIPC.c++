@@ -20,7 +20,7 @@ struct Message {
     long msg_type;
     char msg_text[256];
 };
-
+// / Class for IPC Framework, handling Pipes, Message Queues, Shared Memory, and Sockets
 class IPCFramework {
 public:
     // Pipes
@@ -157,17 +157,17 @@ int main() {
     IPCFramework::sendMessageQueue(msgid, "Hello from Message Queue!");
     IPCFramework::receiveMessageQueue(msgid);
 
-    // Test Shared Memory
+    // Test Shared memory
     cout << "\n[Testing Shared Memory]\n";
     int shmid = IPCFramework::createSharedMemory();
     IPCFramework::writeSharedMemory(shmid, "Hello from Shared Memory!");
     IPCFramework::readSharedMemory(shmid);
 
-    // Test Sockets
+    // Test Socket
     cout << "[Testing Sockets]\n";
-    thread serverThread([] { IPCFramework::startServer(); });
+    thread serverThread([] { IPCFramework::startServer();});
     this_thread::sleep_for(chrono::seconds(1));
-    thread clientThread([] { IPCFramework::startClient(); });
+    thread clientThread([] { IPCFramework::startClient();});
     serverThread.join();
     clientThread.join();
 
