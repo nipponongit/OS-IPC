@@ -1,2 +1,2 @@
 # OS-IPC
-this is 
+OS project on Inter process communication
