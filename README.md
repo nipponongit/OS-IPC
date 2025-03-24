@@ -2,5 +2,5 @@
 OS project on Inter process communication
 By-
 1.Saksham Chaudhary
-2.Shahin
-3.Nippon Tadrishi
+2.Nippon Tadrishi
+3.Shahin
